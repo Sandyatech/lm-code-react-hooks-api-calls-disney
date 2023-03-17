@@ -18,8 +18,8 @@ const App: React.FC = () => {
             const json = await apiResponse.json() as { data: DisneyCharacter[] };
             setCharacters(json.data);
         };
-        getCharacters(1);
-    }, []);
+        getCharacters(currentPage);
+    }, [currentPage]);
   return (
         <div className="page">
           <Header currentPage={currentPage} />
